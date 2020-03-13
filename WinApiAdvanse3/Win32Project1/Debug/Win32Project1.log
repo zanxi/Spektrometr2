@@ -1,0 +1,975 @@
+﻿  SerialPort.cpp
+  Примечание: включение файла:  D:\_V2020_\_Rabota_2020__\_______________\WinApiAdvanse2\Win32Project1\.\stdwin.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afx.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\new.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\sal.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\concurrencysal.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vadefs.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_new_debug.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_new.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\crtdefs.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxver_.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxv_w32.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winsdkver.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winapifamily.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winpackagefamily.h
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\sdkddkver.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Windows.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\excpt.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\stdarg.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\specstrings.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\specstrings_strict.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\specstrings_undef.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\driverspecs.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\sdv_driverspecs.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wctype.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\kernelspecs.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\basetsd.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h
+  Примечание: включение файла:            C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memory.h
+  Примечание: включение файла:             C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memcpy_s.h
+  Примечание: включение файла:              C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\errno.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_string.h
+  Примечание: включение файла:            C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\apiset.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ktmtypes.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winbase.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\apisetcconv.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\minwinbase.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\apiquery2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\processenv.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\fileapifromapp.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\fileapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\debugapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\utilapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\handleapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\errhandlingapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\fibersapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\namedpipeapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\profileapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\heapapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ioapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\synchapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\interlockedapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\processthreadsapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\sysinfoapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\memoryapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\enclaveapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\threadpoollegacyapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\threadpoolapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\jobapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\jobapi2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wow64apiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\libloaderapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\securitybaseapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\namespaceapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\systemtopologyapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\processtopologyapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\securityappcontainer.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\realtimeapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\timezoneapi.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wingdi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\tvout.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnls.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\datetimeapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\stringapiset.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnls.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wincon.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wincontypes.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\consoleapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\consoleapi2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\consoleapi3.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winver.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\verrsrc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winreg.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\reason.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnetwk.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\wnnc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\stralign.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winsvc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\mcx.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\imm.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ime_cmodes.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\zmouse.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\CommCtrl.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\prsht.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dpa_dsa.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\tchar.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\mbstring.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\mbctype.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxv_dll.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_stdio_config.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_malloc.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_search.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stddef.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdlib.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\limits.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wtime.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltrace.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atldef.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlrc.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\WinSock2.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ws2def.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\inaddr.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\qos.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlconv.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlalloc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Ole2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\objbase.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpc.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcdce.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcdcep.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\rpcnsi.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcnterr.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcasync.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcndr.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\rpcnsip.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcsal.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\combaseapi.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\wtypesbase.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\unknwnbase.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\objidlbase.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\cguid.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\coml2api.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\objidl.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\unknwn.h
+  Примечание: включение файла:            C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\wtypes.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\propidlbase.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oaidl.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\urlmon.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oleidl.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\servprov.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\msxml.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\propidl.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oleauto.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxstr.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlcore.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlchecked.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlexcept.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wdirect.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wio.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_share.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wprocess.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys/stat.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys/types.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlsimpcoll.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlwinverapi.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\type_traits
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\yvals_core.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xkeycheck.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xstddef
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstddef
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xtr1common
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstdlib
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\math.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\initializer_list
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\cstringt.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlsimpstr.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlmem.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\ATLComMem.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlcomcli.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\OleCtl.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ocidl.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\intrin.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\intrin0.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\setjmp.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\immintrin.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\wmmintrin.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\nmmintrin.h
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\smmintrin.h
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\tmmintrin.h
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\pmmintrin.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\emmintrin.h
+  Примечание: включение файла:               C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xmmintrin.h
+  Примечание: включение файла:                C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\mmintrin.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\zmmintrin.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\ammintrin.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\mm3dnow.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltransactionmanager.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ktmw32.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltime.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oledb.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\transact.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\accctrl.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxcoll.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxstat_.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltypes.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxtls_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afx.inl
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxwin.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\shellapi.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxres.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\commdlg.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\prsht.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxctrlcontainer.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ShObjIdl.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\docobj.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\shtypes.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\comcat.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\prsht.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\propsys.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\StructuredQueryCondition.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\propkeydef.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ObjectArray.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\shobjidl_core.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\sherrors.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\prsht.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\thumbcache.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlhandler.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Filter.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlstr.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlbase.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atliface.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oleacc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\process.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_startup.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\math.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_startup.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Shlwapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\statreg.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\tpcshrd.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\vssym32.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\VSStyle.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ws2ipdef.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\in6addr.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\WinDNS.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\iphlpapi.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\iprtrmib.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\mprapidef.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\lmcons.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ipifcons.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ipmib.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ifmib.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ifdef.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\nldef.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\tcpmib.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\udpmib.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ipexport.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\packon.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\packoff.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\iptypes.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\tcpestats.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\netioapi.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntddndis.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\devpkey.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\devpropdef.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pciprop.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ndis/version.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windot11.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\WlanTypes.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dwmapi.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\uxtheme.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\HtmlHelp.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\UIAnimation.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dcompanimation.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxanimationcontroller.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxanimationhelper.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxtempl.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxplex_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxmsg_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxdd_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxrendertarget.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\d3d9types.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\float.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\dxgitype.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\dxgicommon.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\dxgiformat.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d2d1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dcommon.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\D2DErr.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\D2DBaseTypes.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10_1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\dxgi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3dcommon.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10sdklayers.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10misc.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10shader.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10effect.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10_1shader.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d2d1helper.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dwrite.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wincodec.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\intsafe.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxdll_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxwin4.inl
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxlayout.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxext.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxdlgs.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Richedit.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\iostream
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\istream
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\ostream
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\ios
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xlocnum
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\climits
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cmath
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\yvals.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\crtdefs.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\use_ansi.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xtgmath.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstdio
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\streambuf
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xiosbase
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\share.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\system_error
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cerrno
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\stdexcept
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\exception
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_exception.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\eh.h
+  Примечание: включение файла:               C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_terminate.h
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xstring
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\iosfwd
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstring
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cwchar
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xmemory
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstdint
+  Примечание: включение файла:               C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\stdint.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\limits
+  Примечание: включение файла:               C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cfloat
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\new
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xatomic.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xutility
+  Примечание: включение файла:               C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\utility
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xcall_once.h
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xerrc.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xlocale
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\memory
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\typeinfo
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_typeinfo.h
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xfacet
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xlocinfo
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xlocinfo.h
+  Примечание: включение файла:             C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\locale.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\thread
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\chrono
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\ratio
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xtimec.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\tuple
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xthreads.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vector
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\map
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xtree
+  Примечание: включение файла:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\io.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_io.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\string
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cctype
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\fstream
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\algorithm
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\functional
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\numeric
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\stack
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\deque
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\mutex
+  Примечание: включение файла:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\tlhelp32.h
+  Примечание: включение файла:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\psapi.h
+  Примечание: включение файла:  D:\_V2020_\_Rabota_2020__\_______________\WinApiAdvanse2\Win32Project1\SerialPort.h
+  WinApp.cpp
+  Примечание: включение файла:  D:\_V2020_\_Rabota_2020__\_______________\WinApiAdvanse2\Win32Project1\.\resource.h
+  Примечание: включение файла:  D:\_V2020_\_Rabota_2020__\_______________\WinApiAdvanse2\Win32Project1\.\stdwin.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afx.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\new.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\sal.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\concurrencysal.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vadefs.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_new_debug.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_new.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\crtdefs.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxver_.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxv_w32.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winsdkver.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winapifamily.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winpackagefamily.h
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\sdkddkver.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Windows.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\excpt.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\stdarg.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\specstrings.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\specstrings_strict.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\specstrings_undef.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\driverspecs.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\sdv_driverspecs.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wctype.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\kernelspecs.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\basetsd.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h
+  Примечание: включение файла:            C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memory.h
+  Примечание: включение файла:             C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memcpy_s.h
+  Примечание: включение файла:              C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\errno.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_string.h
+  Примечание: включение файла:            C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\apiset.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ktmtypes.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winbase.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\apisetcconv.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\minwinbase.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\apiquery2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\processenv.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\fileapifromapp.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\fileapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\debugapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\utilapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\handleapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\errhandlingapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\fibersapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\namedpipeapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\profileapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\heapapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ioapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\synchapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\interlockedapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\processthreadsapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\sysinfoapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\memoryapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\enclaveapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\threadpoollegacyapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\threadpoolapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\jobapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\jobapi2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wow64apiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\libloaderapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\securitybaseapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\namespaceapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\systemtopologyapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\processtopologyapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\securityappcontainer.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\realtimeapiset.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\timezoneapi.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wingdi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\tvout.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnls.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\datetimeapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\stringapiset.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnls.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wincon.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wincontypes.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\consoleapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\consoleapi2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\consoleapi3.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winver.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\verrsrc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winreg.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\reason.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnetwk.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\wnnc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\stralign.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winsvc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\mcx.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\imm.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ime_cmodes.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\zmouse.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\CommCtrl.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\prsht.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dpa_dsa.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\tchar.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\mbstring.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\mbctype.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxv_dll.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_stdio_config.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_malloc.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_search.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stddef.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdlib.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\limits.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wtime.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltrace.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atldef.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlrc.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\WinSock2.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ws2def.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\inaddr.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\qos.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlconv.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlalloc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Ole2.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\objbase.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpc.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcdce.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcdcep.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\rpcnsi.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcnterr.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcasync.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcndr.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\rpcnsip.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\rpcsal.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\combaseapi.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\wtypesbase.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\unknwnbase.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\objidlbase.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\cguid.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\coml2api.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\objidl.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\unknwn.h
+  Примечание: включение файла:            C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\wtypes.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\propidlbase.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oaidl.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\urlmon.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oleidl.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\servprov.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\msxml.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\propidl.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oleauto.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxstr.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlcore.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlchecked.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlexcept.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wdirect.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wio.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_share.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wprocess.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys/stat.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys/types.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlsimpcoll.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlwinverapi.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\type_traits
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\yvals_core.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xkeycheck.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xstddef
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstddef
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xtr1common
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstdlib
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\math.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\initializer_list
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\cstringt.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlsimpstr.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlmem.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\ATLComMem.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlcomcli.h
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\OleCtl.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ocidl.h
+  Примечание: включение файла:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\intrin.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\intrin0.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\setjmp.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\immintrin.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\wmmintrin.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\nmmintrin.h
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\smmintrin.h
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\tmmintrin.h
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\pmmintrin.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\emmintrin.h
+  Примечание: включение файла:               C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xmmintrin.h
+  Примечание: включение файла:                C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\mmintrin.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\zmmintrin.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\ammintrin.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\mm3dnow.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltransactionmanager.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ktmw32.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltime.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oledb.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\transact.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack2.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\accctrl.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxcoll.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxstat_.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltypes.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxtls_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afx.inl
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxwin.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\shellapi.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxres.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\commdlg.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\prsht.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxctrlcontainer.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ShObjIdl.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\docobj.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\shtypes.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\comcat.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\prsht.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\propsys.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\StructuredQueryCondition.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\propkeydef.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ObjectArray.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\shobjidl_core.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\sherrors.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\prsht.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\thumbcache.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlhandler.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Filter.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlstr.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atlbase.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\atliface.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\oleacc.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\process.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_startup.h
+  Примечание: включение файла:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\math.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_startup.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Shlwapi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\statreg.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\tpcshrd.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\vssym32.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\VSStyle.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ws2ipdef.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\in6addr.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\WinDNS.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\iphlpapi.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\iprtrmib.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\mprapidef.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\lmcons.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ipifcons.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ipmib.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ifmib.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ifdef.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\nldef.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\tcpmib.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\udpmib.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\ipexport.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\packon.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\packoff.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\iptypes.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\tcpestats.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\netioapi.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntddndis.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\devpkey.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\devpropdef.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pciprop.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ndis/version.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windot11.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\WlanTypes.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dwmapi.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\uxtheme.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack8.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack1.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\HtmlHelp.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\UIAnimation.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dcompanimation.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxanimationcontroller.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxanimationhelper.h
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxtempl.h
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxplex_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxmsg_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxdd_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxrendertarget.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\d3d9types.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\float.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\dxgitype.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\dxgicommon.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\dxgiformat.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d2d1.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dcommon.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\D2DErr.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\D2DBaseTypes.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10_1.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\dxgi.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3dcommon.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10sdklayers.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10misc.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10shader.h
+  Примечание: включение файла:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10effect.h
+  Примечание: включение файла:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d10_1shader.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d2d1helper.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dwrite.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wincodec.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\intsafe.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxdll_.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxwin4.inl
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxlayout.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxext.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\atlmfc\include\afxdlgs.h
+  Примечание: включение файла:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\Richedit.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\pshpack4.h
+  Примечание: включение файла:      C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\poppack.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\iostream
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\istream
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\ostream
+  Примечание: включение файла:      C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\ios
+  Примечание: включение файла:       C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xlocnum
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\climits
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cmath
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\yvals.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\crtdefs.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\use_ansi.h
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xtgmath.h
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstdio
+  Примечание: включение файла:        C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\streambuf
+  Примечание: включение файла:         C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xiosbase
+  Примечание: включение файла:          C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\share.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\system_error
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cerrno
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\stdexcept
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\exception
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_exception.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\eh.h
+  Примечание: включение файла:               C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_terminate.h
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xstring
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\iosfwd
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstring
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cwchar
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xmemory
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cstdint
+  Примечание: включение файла:               C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\stdint.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\limits
+  Примечание: включение файла:               C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cfloat
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\new
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xatomic.h
+  Примечание: включение файла:              C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xutility
+  Примечание: включение файла:               C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\utility
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xcall_once.h
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xerrc.h
+  Примечание: включение файла:          C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xlocale
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\memory
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\typeinfo
+  Примечание: включение файла:             C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vcruntime_typeinfo.h
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xfacet
+  Примечание: включение файла:           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xlocinfo
+  Примечание: включение файла:            C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xlocinfo.h
+  Примечание: включение файла:             C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\locale.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\thread
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\chrono
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\ratio
+  Примечание: включение файла:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xtimec.h
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\tuple
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xthreads.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\vector
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\map
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\xtree
+  Примечание: включение файла:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\io.h
+  Примечание: включение файла:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_io.h
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\string
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\cctype
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\fstream
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\algorithm
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\functional
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\numeric
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\stack
+  Примечание: включение файла:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\deque
+  Примечание: включение файла:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include\mutex
+  Примечание: включение файла:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\tlhelp32.h
+  Примечание: включение файла:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\psapi.h
+D:\_V2020_\_Rabota_2020__\_______________\WinApiAdvanse2\Win32Project1\WinApp.cpp(287,3): warning C4229: устаревший элемент: пропуск модификаторов для данных
+  Создание кода...
+  Win32Project1.vcxproj -> D:\_V2020_\_Rabota_2020__\_______________\WinApiAdvanse2\Debug\Win32Project1.exe
