@@ -10,6 +10,8 @@ WCHAR szTitle[MAX_LOADSTRING];
 WCHAR szWindowClass[MAX_LOADSTRING];
 map<HWND, HACCEL> l_mAccelTable;
 
+////////////////////////////////////////
+
 ATOM MyRegisterClass(HINSTANCE hInst);
 HWND InitInstance(HINSTANCE, int);
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
